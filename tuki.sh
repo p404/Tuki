@@ -1,8 +1,10 @@
 #!/bin/bash
 # Tor + Privoxy + Chromiun
 # TODO
-# Better build - rebuilding the images, better check against tor api, better install (curl style)
+# Better build - rebuilding the images, better check against tor api
 
+#docker pull jess/tor-proxy
+#docker pull jess/privoxy
 
 NORMAL="\\033[0;39m"
 RED="\\033[1;31m"
