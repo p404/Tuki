@@ -16,8 +16,8 @@ SCRIPT_PATH=https://raw.githubusercontent.com/p404/Tuki/master/tuki.sh
 httpcode=$(curl -s -o /dev/null -I -w '%{http_code}' --max-time 10 --retry-delay 2 --retry 3 $SCRIPT_PATH || echo "404" )
 if [ $httpcode -eq 200 ]; then
 	echo "Installing Tuki "
-    curl -sSL $SCRIPT_PATH > $INSTALL_LOCATION/tuki
-    chmod +x $INSTALL_LOCATION/tuki
+    sudo curl -sSL $SCRIPT_PATH > $INSTALL_LOCATION/tuki
+    sudo chmod +x $INSTALL_LOCATION/tuki
 
 else
     echo "Failed to pull installer off github.com (http err: ${httpcode}), please try again."
